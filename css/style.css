@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); /*Playfair*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap'); /*lato*/
+
+body{
+    color: white;
+    font-family: 'Playfair Display', serif;
+    scroll-snap-type: y mandatory;
+}
+body>*:not(header){
+    scroll-snap-align: start;
+}
+header{
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 0 60px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+}
+
+.btn_container{
+    display: flex;
+    gap: 40px;
+}
+.logo{
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.slider{
+    overflow: scroll;
+    position: relative;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+
+.slider::-webkit-scrollbar{
+    height: 0;
+    width: 0;
+}
+
+.slide{
+    height: 100vh;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    scroll-snap-align: start;
+}
+.slide__title{
+    font-size: 6em;
+    margin-bottom: 75px;
+}
+.slider__sub-title{
+    font-size: 24px;
+}
+.button{
+    position: absolute;
+    bottom: 80px;
+    font-size: 12px;
+    padding: 15px 30px;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+}
+.info{
+    background-color: black;
+    height: 435px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.info__slide{
+    font-size: 40px;
+}
+.info__sub-title{
+    margin-top: 5px;
+    font-size: 24px;
+}
+.button-white{
+    position: absolute;
+    bottom: 80px;
+    font-size: 12px;
+    padding: 15px 30px;
+    background-color: white;
+    border-radius: 30px;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    color: black;
+}
